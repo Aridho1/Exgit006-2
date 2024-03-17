@@ -1,0 +1,26 @@
+Git Remote
+
+git remote adalah membuat sebuah project menjadi ada di 2 repo (lokal dan github)
+
+
+caranya:
+
+jika sudah memiliki repo github, dan blm ada di lokal
+gunakan 'git clone {url}'
+
+jika sebaliknya, gunakan 'git remote add {namaRemote} {url}' + buat branch + push
+
+
+git push, mendorong source dari repo lokal ke github
+git pull, menarik source dari repo github ke lokal
+
+git fetch, meng-up-to-date commit yang ada di repo github
+
+
+jika lokal dan github mengerjakan baris kode yang sama dengan kode yang berbeda, maka akan menjadj konflik saat push
+
+jika terjadi konflik saat push, maka fetch dahulu. lalu pull + merge. harus di solve (merge three way func /fast forward tidak bisa. harus 'git rebase' atau 'git merge')
+
+git rebase, setelah solve manual, hasil nya adalah commit yg diambil adalah commit github,
+
+git merge --no-ff, setelah solve, semua commit masih ada, dengan harus sekalian membuat commit baru.
